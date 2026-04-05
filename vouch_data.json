@@ -1,0 +1,15 @@
+#example: 
+
+{
+  "123456789012345678": {
+    "vouches": 5,
+    "comments": [
+      {
+        "product": "Product A",
+        "rating": 5,
+        "comment": "Great service!",
+        "proof": "proof1.png"
+      }
+    ]
+  }
+}
