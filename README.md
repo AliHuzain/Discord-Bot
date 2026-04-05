@@ -124,6 +124,6 @@ Vouch Progress:
 - Use ```/vouch``` or ```/sendvouch @user``` to test the bot.
 
 # 🔟 Notes
-- Some UI placeholders may need dynamic initialization in __init__.
+- It can be used with any free hosting site, Don't forget your .env file for discord token from https://discord.com/developers/applications/
 - wait_for_image_upload depends on bot.wait_for('message'). Ensure bot is globally defined.
 - Emojis, images, and links are preconfigured in SelectOptions.
