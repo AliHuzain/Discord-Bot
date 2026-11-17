@@ -1,9 +1,0 @@
-# Example:
-
-{
-  "giveaway1": {
-    "prize": "Free Role",
-    "participants": ["1234", "5678"],
-    "end_time": "2026-04-10T20:00:00"
-  }
-}

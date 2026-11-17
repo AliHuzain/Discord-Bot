@@ -1,0 +1,10 @@
+# Secrets
+.env
+
+# Runtime data written by the bot
+vouch_tracking.json
+giveaway_data.json
+
+# Python
+__pycache__/
+*.pyc

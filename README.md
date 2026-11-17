@@ -71,13 +71,15 @@ A powerful Discord bot that handles Vouch submissions and Giveaways, with intera
 | `/sendvouch <customer>` | Request Vouch from a specific user |
 | `/creategiveaway` | Create Giveaway (Owner only) |
 | `/serverinvite` | Generate permanent invite link |
+| `/listgiveaways` | List active and recent giveaways (Owner only) |
+| `/endgiveaway <message_id>` | End a giveaway early (Owner only) |
 
 
   
 4️⃣ Persistent Data & Tracking
   - vouch_tracking.json – Track Vouches per user.
-  - giveaway_tracking.json – Track giveaways and allow resuming after restart.
-  - Auto-save after every update.
+  - giveaway_data.json – Track giveaways and allow resuming after restart.
+  - Auto-save after every update. Both files are created automatically on first run and are git-ignored.
 
 
 
@@ -99,27 +101,26 @@ Vouch Progress:
 - Prize: Nitro Classic
 - Ends: 24 hours
 - Hosted by: @Admin
-- React with 🎉 to enter!
+- Members enter by reacting to the giveaway post (the bot adds 🎉; any reaction counts).
 
 7️⃣ Requirements
 - Python 3.10+
 - discord.py (with UI Components support)
 - Discord Bot Token
 
-# Setup environment variables or .env file:
+# Setup
 
-- DISCORD_TOKEN=your_token_here
-- FEEDBACK_CHANNEL_ID=channel_id
-- MILESTONE_5_VOUCHES_ROLE=role_id
-- Persistent storage (JSON or database)
+- Copy `.env.example` to `.env` and set `DISCORD_TOKEN=your_token_here`. The token is the only value read from `.env`; never commit `.env`.
+- Set your server's IDs in the constants at the top of `main.py`: `FEEDBACK_CHANNEL_ID`, `GIVEAWAY_CHANNEL_ID` and `MILESTONE_5_VOUCHES_ROLE`.
+- Data is stored in local JSON files (see Persistent Data & Tracking above).
   
 
 # 8️⃣ Install dependencies
 
-- ```pip install discord.py```
+- ```pip install -r requirements.txt``` (discord.py and python-dotenv)
 
 # 9️⃣ Run the bot
-- ```python bot.py```
+- ```python main.py```
 
 - Use ```/vouch``` or ```/sendvouch @user``` to test the bot.
 
